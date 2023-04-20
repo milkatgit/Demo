@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let window = window {
             window.backgroundColor = .white
             window.makeKeyAndVisible()
-            let nav = UINavigationController(rootViewController: ViewController())
-            window.rootViewController = nav
+            let tabbarController = TabbarConfig.customStyle()
+            window.rootViewController = tabbarController
         }
     }
 
