@@ -11,11 +11,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("hello")
+        navigationItem.title = "home"
         
         // Do any additional setup after loading the view.
     }
-
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let vc = TableViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 
 }
 
