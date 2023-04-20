@@ -1,0 +1,46 @@
+PODS:
+  - Alamofire (5.6.4)
+  - ESTabBarController-swift (2.8.0)
+  - Eureka (5.3.6)
+  - HandyJSON (5.0.2)
+  - Kingfisher (7.6.2)
+  - Realm (10.27.0):
+    - Realm/Headers (= 10.27.0)
+  - Realm/Headers (10.27.0)
+  - RealmSwift (10.27.0):
+    - Realm (= 10.27.0)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.6.4)
+  - ESTabBarController-swift (~> 2.8.0)
+  - Eureka (~> 5.3.6)
+  - HandyJSON (~> 5.0.2)
+  - Kingfisher (~> 7.6.2)
+  - RealmSwift (~> 10.27.0)
+  - SnapKit (~> 5.6.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - ESTabBarController-swift
+    - Eureka
+    - HandyJSON
+    - Kingfisher
+    - Realm
+    - RealmSwift
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
+  Eureka: 28ad9dec6286cd7cd601fdf8e8df39bb7356a8f4
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  Kingfisher: 6c5449c6450c5239166510ba04afe374a98afc4f
+  Realm: 9ca328bd7e700cc19703799785e37f77d1a130f2
+  RealmSwift: 271de77b09a73c5e46ee3252283878153bd5d288
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: 6ac4791db75ffd6c6b8146ebc78e9925d5d5efd8
+
+COCOAPODS: 1.12.1

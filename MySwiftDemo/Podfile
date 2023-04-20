@@ -1,0 +1,38 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '13.0'
+inhibit_all_warnings!
+
+target 'MySwiftDemo' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for MySwiftDemo
+
+  pod "ESTabBarController-swift", '~> 2.8.0'
+  pod 'Kingfisher', '~> 7.6.2'
+  pod 'Alamofire', '~> 5.6.4'
+  pod 'SnapKit', '~> 5.6.0'
+  pod 'HandyJSON', '~> 5.0.2'
+  pod 'RealmSwift', '~> 10.27.0'
+  pod 'Eureka', '~> 5.3.6'
+
+  target 'MySwiftDemoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'MySwiftDemoUITests' do
+    # Pods for testing
+  end
+
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+ target.build_configurations.each do |config|
+  if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 13.0
+    config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+     end
+   end
+  end
+end
