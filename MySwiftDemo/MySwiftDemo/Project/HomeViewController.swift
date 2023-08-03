@@ -15,7 +15,9 @@ class HomeViewController: UIViewController {
         self.navigationItem.title = "this home"
 //        view.backgroundColor = .red
     }
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+    }
 
    
 

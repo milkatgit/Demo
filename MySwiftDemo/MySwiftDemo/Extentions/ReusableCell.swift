@@ -33,26 +33,20 @@ extension ReusableCell where Self: UICollectionReusableView {
 }
 
 extension UICollectionView {
-    func dequeueReusableCell<T: ReusableCell>(cellType: T.Type, for indexPath: IndexPath) -> T {
-        guard let cell = dequeueReusableCell(withReuseIdentifier: T.cellIdentifier, for: indexPath) as? T
-        else {
-            fatalError("Cannot dequeueReusableCell of \(T.self) type!")
-        }
-
-        return cell
-    }
-
     func register<T: ReusableCell>(cellType: T.Type) {
         register(T.self, forCellWithReuseIdentifier: T.cellIdentifier)
     }
+    func dequeueReusableCell<T: ReusableCell>(cellType: T.Type, for indexPath: IndexPath) -> T {
+        let cell = dequeueReusableCell(withReuseIdentifier: cellType.self.cellIdentifier, for: indexPath) as! T
+        return cell
+    }
+
+   
 }
 
 extension UITableView {
     func dequeueReusableCell<T: ReusableCell>(cellType: T.Type, for indexPath: IndexPath) -> T {
-        guard let cell = dequeueReusableCell(withIdentifier: T.cellIdentifier, for: indexPath) as? T else {
-            fatalError("Cannot dequeueReusableCell of \(T.self) type!")
-        }
-        
+        let cell = dequeueReusableCell(withIdentifier: cellType.self.cellIdentifier, for: indexPath) as! T
         return cell
     }
     

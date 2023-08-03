@@ -15,6 +15,7 @@ target 'MySwiftDemo' do
   pod 'HandyJSON', '~> 5.0.2'
   pod 'RealmSwift', '~> 10.27.0'
   pod 'Eureka', '~> 5.3.6'
+  pod 'SwiftDate'
 
   target 'MySwiftDemoTests' do
     inherit! :search_paths
